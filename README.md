@@ -1,6 +1,6 @@
 * Generate project folder
   ```
-    mvn archetype:generate -DgroupId=com.krish.apps -DartifactId=hello-app -DarchetypeArtifactId=maven-archetype-quickstart -Darchtypeversion=1.4 -DinteractiveMode=false
+    mvn archetype:generate -DgroupId=com.krish.apps -DartifactId=hello-app -DarchetypeArtifactId=maven-archetype-quickstart -Darchtypeversion=1.4      -DinteractiveMode=false
   ```
   
 * update with java version
@@ -13,8 +13,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
   ```
-  
-  * add some external dependency
+* add some external dependency
     ```
         <dependency>
         	<groupId>commons-codec</groupId>
@@ -23,7 +22,7 @@
         </dependency>
     ```
     
-  * write some code
+* write some code
     ```
          public static void main(String[] args) {
 
@@ -39,12 +38,11 @@
            return DigestUtils.sha256Hex(input);
          }
     ```
-  
-  * build & package
+* build & package
     ```
        mvn package
     ```
-    
+
 * run the program, but will get error dependency not include file run jar 
   ```
        java -cp target/hello-app-1.0-SNAPSHOT.jar com.krish.apps.App 123
@@ -101,6 +99,3 @@
      mvn clean package
      java -jar target/hello-app-1.0-SNAPSHOT.jar 1234
   ```
-
-
-
